@@ -24,8 +24,8 @@ If you want to check the original template in HTML5 and Bootstrap, [click here](
 ## Installation
 1. Clone this project
     ```bash
-    git clone https://github.com/zuramai/laravel-mazer
-    cd laravel-mazer
+    [git clone https://github.com/zuramai/laravel-mazer](https://github.com/setiawanel161/New-Gloria-Project.git)
+    cd New-Gloria-Project
     ```
 2. Install dependencies
     ```bash
