@@ -51,5 +51,7 @@ Route::post('/add-product', [ProductController::class, 'store'])->name('store-pr
 
 Route::get('/products/{id}/edit', [ProductController::class, 'edit'])->name('edit-product');
 Route::put('/products/{id}/edit', [ProductController::class, 'update'])->name('edit-product');
+Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('delete-product');
 
 Route::post('/store-portfolio', [PortfolioController::class, 'store'])->name('store-portfolio');
+Route::delete('/portfolios/{id}', [PortfolioController::class, 'destroy'])->name('delete-portfolio');

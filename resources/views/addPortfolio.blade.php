@@ -26,10 +26,10 @@
                                             <td>{{ $Portfolio->image_path }}</td>
                                             <td>{{ $Portfolio->description }}</td>
                                             <td>
-                                                <form method="POST" style="display:inline;">
+                                                <form method="POST" action="{{ route('delete-portfolio', $Portfolio->id) }}" style="display:inline;">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</button>
                                                 </form>
                                             </td>
                                         </tr>

@@ -45,5 +45,13 @@ class PortfolioController extends Controller
         return view('addPortfolio', compact('portfolios'));
     }
 
+    public function destroy($id)
+    {
+        $portfolio = Portfolio::findOrFail($id);
+        $portfolio->delete();
+
+        return redirect()->back()->with('success', 'Portfolio deleted successfully!');
+    }
+
     // ...existing code...
 }

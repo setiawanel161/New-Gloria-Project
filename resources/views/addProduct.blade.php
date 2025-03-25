@@ -28,29 +28,29 @@
                                             <td>Rp. {{ number_format($product->price, 0, ',', '.') }}</td>
                                             <td>
                                                 <a href="{{ route('updateProduct', $product->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                                                <form method="POST" style="display:inline;">
+                                                <form method="POST" action="{{ route('delete-product', $product->id) }}" style="display:inline;">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
-                                                    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-{{ $product->id }}">
+                                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus produk ini?')">Hapus</button>
+                                                </form>
+                                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-{{ $product->id }}">
                                                     Description
-                                                    </button>
-                                                    <div class="modal fade" id="modal-{{ $product->id }}" tabindex="-1" role="dialog" aria-labelledby="modalTitle-{{ $product->id }}" aria-hidden="true">
+                                                </button>
+                                                <div class="modal fade" id="modal-{{ $product->id }}" tabindex="-1" role="dialog" aria-labelledby="modalTitle-{{ $product->id }}" aria-hidden="true">
                                                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
                                                         <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="modalTitle-{{ $product->id }}">Description</h5>
-                                                        </div>
-                                                        <div class="modal-body text-start">
-                                                            <p>{{ $product->details }}</p>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">Close</button>
-                                                        </div>
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="modalTitle-{{ $product->id }}">Description</h5>
+                                                            </div>
+                                                            <div class="modal-body text-start">
+                                                                <p>{{ $product->details }}</p>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">Close</button>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    </div>
-                                                </form>
+                                                </div>
                                             </td>
                                         </tr>
                                     @empty

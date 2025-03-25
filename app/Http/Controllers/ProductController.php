@@ -93,6 +93,20 @@ class ProductController extends Controller
         return redirect()->back()->with('success', 'Product updated successfully!');
     }
 
+    public function destroy($id)
+    {
+        $product = Product::findOrFail($id);
+
+        // Delete the product image from storage
+        if ($product->image) {
+            \Storage::disk('public')->delete($product->image);
+        }
+
+        // Delete the product from the database
+        $product->delete();
+
+        return redirect()->back()->with('success', 'Product deleted successfully!');
+    }
 
         // ...existing code...
 }
