@@ -33,7 +33,7 @@ class PortfolioController extends Controller
         $portfolios = Portfolio::all();
 
         // Kirim data produk ke view
-        return view('newhome', compact('portfolios'));
+        return view('home', compact('portfolios'));
     }
 
     public function addPortfolioView()

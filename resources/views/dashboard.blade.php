@@ -16,7 +16,7 @@
     </x-slot>
 
     
-    <section class="section">
+    {{-- <section class="section">
         <div class="card">
             <div class="card-header">
                 <h4 class="card-title">Example Content</h4>
@@ -29,5 +29,5 @@
                 distinctio incidunt! Vel aspernatur dicta consequatur!
             </div>
         </div>
-    </section>
+    </section> --}}
 </x-app-layout>

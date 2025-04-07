@@ -19,14 +19,14 @@ use App\Http\Controllers\PortfolioController;
 
 Route::get('/', [PortfolioController::class, 'index']);
 
-Route::get('/newlayanan', [ProductController::class, 'index']);
+Route::get('/layanan', [ProductController::class, 'index']);
 
 Route::get('/blog', function () {
     return view('blog');
 });
 
-Route::get('/newabout', function () {
-    return view('newabout');
+Route::get('/about', function () {
+    return view('about');
 });
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function() {

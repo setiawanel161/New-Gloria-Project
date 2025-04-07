@@ -43,7 +43,7 @@ class ProductController extends Controller
         $products = Product::all();
 
         // Kirim data produk ke view
-        return view('newlayanan', compact('products'));
+        return view('layanan', compact('products'));
     }
 
     public function addProductView()
