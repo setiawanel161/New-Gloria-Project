@@ -1,4 +1,4 @@
-<section id="hero" class="hero section">
+<section id="hero" class="hero section" style="background-image: url('{{ asset('assets/images/Background1.png') }}'); background-size: cover; background-position: center;">
     <div id="hero-carousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
       <div class="carousel-item active">
         <div class="carousel-container">

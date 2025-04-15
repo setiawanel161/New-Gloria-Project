@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
   <!-- Vendor CSS Files -->
   <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -364,7 +365,7 @@
         <div class="row gy-4">
           @foreach ($portfolios as $portfolio)
             <div class="col-lg-4 col-md-6 portfolio-item">
-              <img src="{{ asset('storage/' . $portfolio->image_path) }}" class="img-fluid" alt="{{ $portfolio->title }}">
+              <img src="{{ asset('storage/' . $portfolio->image_path) }}" class="rounded img-fluid" alt="{{ $portfolio->title }}">
               <div class="portfolio-info">
                 <h4>{{ $portfolio->title }}</h4>
                 <p>{{ $portfolio->description }}</p>
@@ -377,86 +378,153 @@
 
     <section id="pricing" class="pricing section">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Pricing</h2>
-        <p>What they are saying about us</p>
+        <h2>Daftar Harga Layanan</h2>
+        <p>Paket layanan yang tersedia</p>
       </div>
+
       <div class="container">
-        <div class="row gy-3 justify-content-center">
-          <div class="col-xl-3 col-lg-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="pricing-item featured h-100 d-flex flex-column">
-              <h3>Economy</h3>
-              <h4><sup>Rp</sup>6.300.000</h4>
-              <ul>
-                <li>Mobil Jenazah dalam kota</li>
-                <li>Peti Jenazah Coklat Pitur</li>
-                <li>Kain Tule</li>
-                <li>Bunga Meja 2 Buah</li>
-                <li>Bunga Salib 1 Buah</li>
-                <li>Bunga Tabur 2 Keranjang</li>
-                <li>Kaos Kaki dan Sarung tangan Jenazah</li>
-                <li>Memandikan dan Merias Jenazah</li>
-                <li>Kayu Nisan Salib</li>
-                <li>Kapur Barus</li>
-                <li>Bantal Guling</li>
-              </ul>
-              <div class="btn-wrap mt-auto">
-                <a href="#" class="btn-buy">Buy Now</a>
+        <div class="swiper-container" id="tinderSlider">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="pricing-item">
+                <span class="small d-block mb-2 advanced">Mulai dari</span>
+                <h3 class="fw-bold">Super Ekonomis</h3>
+                <h4 class="text-primary"><sup>Rp</sup>3.800.000</h4>
+                <ul class="mt-3">
+                  <li>Peti smokan</li>
+                  <li>Mobil Jenazah 2x pengantaran dalam kota</li>
+                  <li>Kaos kaki & Sarung tangan</li>
+                  <li>Sekrup 6 buah</li>
+                  <li>Kain tule & Kapur barus</li>
+                  <li>Kayu Nisan Salib</li>
+                  <li>Bunga meja lilin & Bunga Salib</li>
+                  <li>Bunga tabur 2 keranjang</li>
+                  <li>Memandikan & merias jenazah</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="pricing-item">
+                <span class="small d-block mb-2 advanced">Mulai dari</span>
+                <h3 class="fw-bold">Ekonomi</h3>
+                <h4 class="text-primary"><sup>Rp</sup>6.800.000</h4>
+                <ul class="mt-3">
+                  <li>Peti Standar Coklat Plitur</li>
+                  <li>Mobil Jenazah 2x pengantaran dalam kota</li>
+                  <li>Kain Tule, Kapur barus</li>
+                  <li>Bunga meja 2 buah & Bunga Salib</li>
+                  <li>Bunga tabur 2 keranjang</li>
+                  <li>Kaos kaki & Sarung tangan jenazah</li>
+                  <li>Memandikan & merias jenazah</li>
+                  <li>Kayu Nisan Salib</li>
+                  <li>Bantal guling</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="pricing-item">
+                <h3 class="fw-bold">Standard</h3>
+                <h4 class="text-warning">Tanyakan Harga</h4>
+                <ul class="mt-3">
+                  <li>Peti Jenazah Coklat/Putih Perjamuan</li>
+                  <li>Mobil Jenazah 2x pengantaran dalam kota</li>
+                  <li>Bunga meja 2 buah & Bunga Salib</li>
+                  <li>Bunga tangan & Bunga tabur 2 keranjang</li>
+                  <li>Kayu Nisan Salib</li>
+                  <li>Kaos kaki & Sarung tangan jenazah</li>
+                  <li>Kapur barus, Kain Tule</li>
+                  <li>Memandikan & merias jenazah</li>
+                  <li>Bantal, Guling</li>
+                  <li>Air mineral 2 dus & Permen 2 bungkus</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div class="pricing-item">
+                <h3 class="fw-bold">Premium</h3>
+                <h4 class="text-warning">Tanyakan Harga</h4>
+                <ul class="mt-3">
+                  <li>Peti Jenazah Diplomat Perjamuan Kudus Handle Standar</li>
+                  <li>Mobil Jenazah 2x pengantaran dalam kota</li>
+                  <li>Bunga meja 2 buah</li>
+                  <li>Bunga salib 1 buah</li>
+                  <li>Bunga tangan</li>
+                  <li>Bunga tabur 6 keranjang</li>
+                  <li>Bunga atas peti</li>
+                  <li>Kayu Nisan Salib</li>
+                  <li>Kaos kaki dan sarung tangan jenazah</li>
+                  <li>Memandikan dan merias jenazah</li>
+                  <li>Kapur barus</li>
+                  <li>Bantal, Guling dan Kain Tule</li>
+                  <li>Air mineral 2 dus dan permen 2 bungkus</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="swiper-slide">
+              <div class="pricing-item">
+                <h3 class="fw-bold">Eksekutif 1</h3>
+                <h4 class="text-warning">Tanyakan Harga</h4>
+                <ul class="mt-3">
+                  <li>Peti Perjamuan Mataram</li>
+                  <li>Mobil Jenazah 2x pengantaran dalam kota</li>
+                  <li>Nisan Salib</li>
+                  <li>Kaos tangan, kaos kaki, bantal guling, kain tule</li>
+                  <li>Memandikan Jenazah</li>
+                  <li>Merias Jenazah</li>
+                  <li>Bunga Meja plus Lilin 2 buah</li>
+                  <li>Bunga Salib</li>
+                  <li>Bunga di atas peti</li>
+                  <li>Bunga tabur 6 keranjang</li>
+                  <li>Bunga tangan</li>
+                  <li>Kapur barus</li>
+                  <li>Snack 50 Dos</li>
+                  <li>Air mineral 2 Dos</li>
+                  <li>Permen 2 Bungkus</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="swiper-slide">
+              <div class="pricing-item">
+                <h3 class="fw-bold">Eksklusif 2</h3>
+                <h4 class="text-warning">Tanyakan Harga</h4>
+                <ul class="mt-3">
+                  <li>Peti Perjamuan Eksklusif Ukir</li>
+                  <li>Mobil Jenazah 2x pengantaran dalam kota</li>
+                  <li>Nisan Salib</li>
+                  <li>Kaos tangan, kaos kaki, bantal guling, kain tule</li>
+                  <li>Memandikan Jenazah</li>
+                  <li>Merias Jenazah</li>
+                  <li>Bunga Meja plus Lilin 2 buah</li>
+                  <li>Bunga Salib</li>
+                  <li>Bunga di atas peti</li>
+                  <li>Bunga tabur 6 keranjang</li>
+                  <li>Bunga tangan</li>
+                  <li>Kapur barus</li>
+                  <li>Snack 50 Dos</li>
+                  <li>Air mineral 2 Dos</li>
+                  <li>Permen 2 Bungkus</li>
+                </ul>
               </div>
             </div>
           </div>
-          <div class="col-xl-3 col-lg-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-            <div class="pricing-item h-100 d-flex flex-column">
-              <h3>Standard</h3>
-              <h4><sup>Rp</sup>7.800.000</h4>
-              <ul>
-                <li>Mobil Jenazah dalam kota</li>
-                <li>Peti Jenazah Coklat Perjamuan</li>
-                <li>Bunga Meja 2 Buah</li>
-                <li>Bunga Salib 1 Buah</li>
-                <li>Bunga Tangan</li>
-                <li>Bunga Tabur 2 Keranjang</li>
-                <li>Kaos Kaki dan Sarung tangan Jenazah</li>
-                <li>Memandikan dan Merias Jenazah</li>
-                <li>Kayu Nisan Salib</li>
-                <li>Kapur Barus</li>
-                <li>Air Mineral 2 Dus</li>
-                <li>Permen 2 Bungkus</li>
-                <li>Bantal Guling dan Kain Tule</li>
-              </ul>
-              <div class="btn-wrap mt-auto">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-            <div class="pricing-item h-100 d-flex flex-column">
-              <span class="advanced">Advanced</span>
-              <h3>VIP</h3>
-              <h4><sup>Rp</sup>14.800.000</h4>
-              <ul>
-                <li>Mobil Jenazah dalam kota</li>
-                <li>Peti Jenazah Ekslusif Putih Perjamuan Handle</li>
-                <li>Bunga Meja 2 Buah</li>
-                <li>Bunga Salib 1 Buah</li>
-                <li>Bunga Tangan</li>
-                <li>Bunga Atas Peti</li>
-                <li>Bunga Tabur 6 Keranjang</li>
-                <li>Kaos Kaki dan Sarung tangan Jenazah</li>
-                <li>Memandikan dan Merias Jenazah</li>
-                <li>Kayu Nisan Salib</li>
-                <li>Kapur Barus</li>
-                <li>Air Mineral 2 Dus</li>
-                <li>Permen 2 Bungkus</li>
-                <li>Bantal Guling dan Kain Tule</li>
-              </ul>
-              <div class="btn-wrap mt-auto">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
+
+          <!-- Navigasi Swiper -->
+          <!-- <div class="swiper-pagination mt-4"></div> -->
         </div>
       </div>
     </section>
+
   </main>
 
   <x-new-hompage-footer />
@@ -472,6 +540,32 @@
   <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
   <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
   <script src="{{ asset('assets/js/main.js') }}"></script>
+
+  <!-- Include Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper('#tinderSlider', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  </script>
+
+
+
 </body>
 
 </html>

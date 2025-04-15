@@ -110,7 +110,7 @@
 
                             <div class="form-group">
                                 <label for="hargaproduk">Harga Produk (dalam Rp.)</label>
-                                <input type="number" class="form-control" id="hargaproduk" name="hargaproduk" placeholder="10000000" required>
+                                <input type="number" class="form-control" id="hargaproduk" name="hargaproduk" placeholder="10000000">
                             </div>
 
                             <div class="mb-3">

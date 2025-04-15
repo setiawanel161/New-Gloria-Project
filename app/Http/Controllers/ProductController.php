@@ -19,7 +19,7 @@ class ProductController extends Controller
         $request->validate([
             'namaproduk' => 'required|string|max:255',
             'jeniskayu' => 'required|string|max:255',
-            'hargaproduk' => 'required|numeric',
+            'hargaproduk' => 'nullable|numeric',
             'gambarproduk' => 'required|image|mimes:jpeg,png,jpg|max:2048',
             'detailproduk' => 'required|string',
         ]);
@@ -69,7 +69,7 @@ class ProductController extends Controller
     $request->validate([
         'namaproduk' => 'required|string|max:255',
         'jeniskayu' => 'required|string|max:255',
-        'hargaproduk' => 'required|numeric',
+        'hargaproduk' => 'nullable|numeric',
         'gambarproduk' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
         'detailproduk' => 'required|string',
     ]);

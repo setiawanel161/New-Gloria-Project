@@ -46,7 +46,7 @@
 
                             <div class="form-group">
                                 <label for="hargaproduk">Harga Produk (dalam Rp.)</label>
-                                <input type="number" class="form-control" id="hargaproduk" name="hargaproduk" placeholder="{{ $products->price }}" required>
+                                <input type="number" class="form-control" id="hargaproduk" name="hargaproduk" placeholder="{{ $products->price }}">
                             </div>
 
                             <div class="mb-3">

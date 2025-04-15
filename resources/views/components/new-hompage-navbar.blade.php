@@ -1,7 +1,7 @@
-<header id="header" class="header d-flex align-items-center fixed-top" style="background-color: #10375C; padding-top: 5px; padding-bottom: 10px;">
+<header id="header" class="header d-flex align-items-center fixed-top" style="background-color: #10375C; padding-top: 5px; padding-bottom: 5px;">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <a href="/" class="logo d-flex align-items-center" style="color: #F4F6FF; font-size: 1.2rem;">
-        <img src="{{ asset('images/logo.png') }}" width="40" height="50" alt="Layanan kematian Yogyakarta - Logo" loading="lazy">
+        <img src="{{ asset('images/Logo-Horizontal.png') }}" width="auto" alt="Layanan kematian Yogyakarta - Logo" loading="lazy">
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
